@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const Home = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+import HeroSlider from "../Components/UI/HeroSlider";
+import Helmet  from '../Components/Helmet';
 
-export default Home
+
+import { Container, Row, Col } from 'reactstrap';
+import FindCarForm from "../"
+
+export default Home;
