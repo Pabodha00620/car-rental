@@ -47,11 +47,71 @@ const BlogDetails = () => {
 
                             <div className="comment_list mt-5">
                                 <h4 className="mb-5">3 Commennts</h4>
+
+                                <div className="single_comment d-flex-gap-3">
+                                    <img src={commentImg} alt="" />
+                                     <div className="comment_content">
+                                        <h6 className="fw-bold">David Visa</h6>
+                                        <p className="section_description mb-0">14 May, 2024</p>
+                                        <p className="section_description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Eos nobis totam eius laborum molestias itaque minima
+                                        distinctio, quae velit tempore!
+                                        </p>
+
+                                        <span className="replay d-flex align-items-center gap-1">
+                                            <i class="ri-reply-line"></i> Replay
+                                        </span>
+                                     </div>
+                                </div>
+
+                                <div className="leave_comment-form mt-5">
+                                    <h4>Leave a Comment</h4>
+                                    <p className="section_description">
+                                        To create a post or leave a comment, you must log in.
+                                    </p>
+
+                                    <Form>
+                                        <FormGroup className="d-flex gap-3">
+                                            <Input type="text" placeholder="Full name" />
+                                            <Input type="email" placeholder="Email" />
+                                        </FormGroup>
+
+                                        <FormGroup>
+                                            <textarea
+                                            rows="5"
+                                            className="w-100 py-2 px-3"
+                                            placeholder="Comment..."></textarea>
+                                        </FormGroup>
+
+                                        <button className="btn comment_btn mt-3">
+                                            Post a Comment
+                                        </button>
+                                    </Form>
+                                </div>
                             </div>
+                        </Col>
+
+                        <Col lg="4" md="4">
+                            <div className="recent_post mb-4">
+                                <h5 className="fw-bold">Recent Posts</h5>
+                            </div>
+                            {blogData.map ((item) =>(
+                                <div className="recent_blog-post mb-4" key={item.id}>
+                                    <div className="recent_blog-item d-flex gap-3">
+                                        <img src={item.imgUrl} alt="" className="w-25 rounded-2" />
+                                        <h6>
+                                            <Link to={ '/blogs/${item.title}'}>{blog.title}</Link>
+                                        </h6>
+                                    </div>
+                                </div>
+                            ))}
                         </Col>
                     </Row>
                 </Container>
             </section>
         </Helmet>
-    )
-}
+    );
+};
+
+export default BlogDetails;
