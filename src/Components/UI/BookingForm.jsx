@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function BookingForm() {
-  return (
-    <div>
-      
-    </div>
-  )
+import "../../styles/booking-form.css";
+import {Form, FormGroup} from "reactstrap";
+
+const BookingForm = () =>{
+  const submitHandler = (event) =>{
+    event.preventDefault();
+  };
 }
+
