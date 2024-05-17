@@ -23,9 +23,25 @@ const CarItem = (props) => {
             <span className='d-flex align-items-center gap-1'>
               <i class="ri-car-line"></i> {model}
             </span>
+            <span className='d-flex align-items-center gap-1'>
+              <i class="ri-settings-2-line"></i> {automatic}
+            </span>
+            <span className='d-flex align-items-center gap-1'>
+              <i class="ri-timer-flash-line"></i> {speed}
+            </span>
           </div>
+
+          <button className='w-50 car_item-btn car_btn-rent'>
+            <Link t0={`/cars/${carName}`}>Rent</Link>
+          </button>
+
+          <button className='e-50 car_item-btn car_btn-details'>
+            <Link to={`/card/${carName}`}>Details</Link>
+          </button>
         </div>
       </div>
     </Col>
-  )
-}
+  );
+};
+
+export default CarItem;
