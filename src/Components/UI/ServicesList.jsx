@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import {Col} from "reactstrap";
+import "../../styles/services-list.css";
+import servicesData from "../../assets/data/serviceData";
 
-export default function ServicesList() {
-  return (
-    <div>
-      
-    </div>
+
+const ServiceList = () => {
+  return(
+    <>
+    {servicesData.map ((item) => (
+      <Sercive></Sercive>
+    ))}
+    </>
   )
 }
