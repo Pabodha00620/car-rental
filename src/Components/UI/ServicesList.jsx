@@ -8,8 +8,10 @@ const ServiceList = () => {
   return(
     <>
     {servicesData.map ((item) => (
-      <Sercive></Sercive>
+      <SerciveItem item={item} key={item.id} />
     ))}
     </>
-  )
-}
+  );
+};
+
+
