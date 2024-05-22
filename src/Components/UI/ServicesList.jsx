@@ -20,8 +20,13 @@ const ServiceItem = ({item}) => (
       <span className='mb-3 d-inline-block'>
         <i class={item.icon}/>
       </span>
+
+      <h6>{item.title}</h6>
+      <p className="section_description">{item.desc}</p>
     </div>
   </Col>
-)
+);
+
+export default ServiceList;
 
 
